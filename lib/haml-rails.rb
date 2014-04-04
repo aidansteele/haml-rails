@@ -13,6 +13,7 @@ module Haml
       config.before_initialize do
         Haml.init_rails(binding)
         Haml::Template.options[:format] = :html5
+        Haml::Template.options[:cdata] = false
       end
 
       initializer 'haml_rails.configure_template_digestor' do
